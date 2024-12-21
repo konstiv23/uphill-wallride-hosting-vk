@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, interactive-widget=resizes-content"
+        />
+        <title>Wallride</title>
+        <link rel="icon" href="./assets/favicon-1dJLq_fR.ico" type="image/x-icon" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
+      <script type="module" crossorigin src="./assets/index-C20lDfAU.js"></script>
+      <link rel="stylesheet" crossorigin href="./assets/index-CrscNLwC.css">
+    </head>
+
+    <body>
+        <section id="game-background-wrapper">
+            <img src="./assets/desert-4388204_cropped7_scaled-BPWFHQPo.jpg">
+        </section>
+
+        <section id="title-sreen">
+            <div id="iphone-not-working" data-i18n="iphone-not-working">
+                This game doesn't work on new iPhones.
+                Devs are welcome to help, email konstiv23 at gmail.
+            </div>
+            <div id="wallride-logo-wrapper">
+                <div id="wallride-logo">
+                    <p>Uphill</p>
+                    <p>Wallride</p>
+                </div>
+            </div>
+            <div id="difficulty-select">
+                <button id="easy-button">
+                    <div data-i18n="easy">Easy</div>
+                    <div>
+                        <span data-i18n="record">Record</span>: 
+                        <span class="record-value"></span>
+                        <div>
+                </button>
+                <button id="medium-button">
+                    <div data-i18n="medium">Medium</div>
+                    <div>
+                        <span data-i18n="record">Record</span>: 
+                        <span class="record-value"></span><div>
+                </button>
+                <button id="hard-button">
+                    <div data-i18n="hard">Hard</div>
+                    <div>
+                        <span data-i18n="record">Record</span>: 
+                        <span class="record-value"></span><div>
+                </button>
+            </div>
+            <footer>
+                <div>
+                    <p>© 2024 Konstantin Ivanov</p>
+                    <p id="cont">konstiv23 at gmail</p>
+                     <details id="asset-credits">
+                        <summary>asset credits</summary>
+                        DIRT BIKE OFF ROAD BIKE LOW POLY by nabeelashrafphotography,<br />
+                        Racer from Mixamo,<br />
+                        Desert Landscape by grebmot
+                     </details>
+                </div>
+                <div id="version">
+                    v0.1.7
+                </div>
+            </footer>
+        </section>
+
+        <div id="score-wrapper">
+            <div id="score"><span id="score-number">0</span></div>
+        </div>
+        <section id="hud-absolute">
+            <div id="hud-container">
+                <div id="tutorial-widget-container">
+                    <div id="tutorial-widget-mouse">🖱️</div>
+                    <div id="tutorial-widget-touch">👆&#xFE0E;</div>
+                </div>
+                <div id="hud-dummy"></div>
+                <div id="speedometer-wrapper">
+                    <div id="speedometer"></div>
+                    <div id="notches">
+                        <hr />
+                        <hr />
+                        <hr />
+                        <hr />
+                        <hr />
+                        <hr />
+                        <hr />
+                        <hr />
+                        <hr />
+                        <hr />
+                        <hr />
+                        <hr />
+                        <hr />
+                        <hr />
+                        <hr />
+                        <hr />
+                        <hr />
+                        <hr />
+                        <hr />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div id="spinner-wrapper">
+            <div id="spinner"></div>
+        </div>
+
+        <section id="retry-screen" class="closed">
+            <div id="retry-screen-score-and-record">
+                <p>
+                    <span data-i18n="score">Score</span>: 
+                    <span id="retry-screen-score-combo">
+                        <span id="retry-screen-score-value">0</span>
+                        <span id="retry-screen-score-stars"></span>
+                    </span>
+                </p>
+                <p>
+                    <span data-i18n="record">Record</span>: 
+                    <span id="retry-screen-record-combo">
+                        <span id="old-record-value">0</span>
+                        <span id="retry-screen-record-stars"></span>
+                    </span>
+                </p>
+            </div>
+            <div id="new-record">
+                <p>
+                    <span data-i18n="new-record">New Record</span> 
+                    <span id="new-record-bang">!</span>
+                </p>
+                <p id="new-record-combo">
+                    <span id="new-record-value">0</span> 
+                    <span id="new-record-stars"></span>
+                </p>
+            </div>
+            <button id="retry-button" data-i18n="retry">Retry</button>
+            <button id="difficulty-select-button">
+                <div data-i18n="difficulty-select-1">Difficulty</div>
+                <div data-i18n="difficulty-select-2">Select</div>
+            </button>
+        </section>
+
+        <canvas id="confetti"></canvas>
+        <div id="vignette-wrapper">
+            <div id="vignette"></div>
+        </div>
+        <script>
+            // //iPhone
+            if(navigator.platform.startsWith("iP")) {
+                document.querySelector("#iphone-not-working").classList.add("visible");
+            }
+        </script>
+
+        <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
+        <script>
+            vkBridge.send("VKWebAppInit", {});
+        </script>
+    </body>
+</html>
